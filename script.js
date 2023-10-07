@@ -35,11 +35,6 @@ function clearAll() {
     updateDisplay();
 }
 
-function updateDisplay() {
-    const display = document.getElementById("display");
-    display.value = sign + val;
-}
-
 function evaluate(operation) {
     const elements = operation.split(/([+\-*/])/);
     const numbers = [];
@@ -89,4 +84,9 @@ function evaluate(operation) {
         numbers.push(operate(num1, num2, sgn));
     }
     return numbers[0];
+}
+
+function updateDisplay() {
+    const display = document.getElementById("display");
+    display.value = sign + val;
 }
